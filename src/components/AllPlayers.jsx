@@ -17,8 +17,7 @@ const AllPlayers = () => {
     <div>
       {players.map((player) => (
         <div key={player.id}>
-          <h4>{player.name}</h4>
-          {/* ...whatever you want to display */}
+          <h4>{player.name}</h4>          
         </div>
       ))}
     </div>
