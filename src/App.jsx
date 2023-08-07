@@ -1,20 +1,22 @@
 import React from "react";
 import { Route, Routes, Link } from "react-router-dom";
-import Navbar from "./components/Navbar";
-
+import AllPlayers from "./components/AllPlayers";
+import Home from "./components/Home";
 
 const App = () => {
   return (
-    <div id="container">
-      <h1>Puppy Bowl React</h1>
-      <div id="main-section">
+    <>
+      <div>
+        Blah
+      </div>
+      <div id="app-container">
         <Routes>
-          <Route path="/" element={<h1>AllPlayers</h1>} />
-          <Route path="/players/:id" element={<h1>SinglePlayer</h1>} />
+          <Route path="/" element={<Home />} />
+          <Route path="/Players" element={<AllPlayers />} />
         </Routes>
       </div>
-    </div>
+    </>
   );
-};
+}
 
 export default App;
