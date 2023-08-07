@@ -1,21 +1,45 @@
-import react from 'react';
+import React from "react";
 
-function NavBar {
+const Navbar = () => {
     return (
-        <nav>
-            <ul>
-                <li>
-                <Link to="/home" className="home">
-          Home
-        </Link>
-        <Link to="/blue" className="blue">
-          Blue
-        </Link>
-        <Link to="/red" className="red">
-          Red
-        </Link>   
-            </li>
-            </ul>
-        </nav>
-    )
-}
+        <>
+           <Nav>
+            <NavLogo to="/">
+                Logo
+            </NavLogo>
+            <Bars />
+
+            <NavMenu>
+                <NavLink 
+                  to="/"
+                  activeStyle={{ color:'black' }}
+                >
+                    Home
+                </NavLink>
+                <NavLink 
+                  to="/about"
+                  activeStyle={{ color: 'black' }}
+                >
+                    About
+                </NavLink>
+                <NavLink 
+                  to="/contact" 
+                  activeStyle={{ color: 'black' }}
+                >
+                    Contact
+                </NavLink>
+                <NavLink
+                  to="/signin"
+                  activeStyle={{ color: 'black' }}
+                >
+                    Sign In
+                </NavLink>
+                <NavBtn>
+                    <NavBtnLink to="/sign-up">Sign Up</NavBtnLink>
+                </NavBtn>
+            </NavMenu>
+           </Nav> 
+        </>
+    );
+};
+export default Navbar;
