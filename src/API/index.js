@@ -1,6 +1,10 @@
 export async function fetchPlayers() {
   try {
     const response = await fetch('https://fsa-puppy-bowl.herokuapp.com/api/2302-ACC-ET-PT-B/players/');
+    const results = await response.json();
+    const players = results.data.players
+    return players;
+  
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }
